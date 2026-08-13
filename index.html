@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Sayan Kakkar // Autonomous AI & Robotics Systems</title>
+  <meta name="description" content="Sayan Kakkar is an autonomous robotics and AI developer at SOSE Shalimar Bagh. Delhi Govt Top 100/33,000 IIIT Boot Camp, Takumi Hackathon 5th, Aaroh GameDev 3rd, Autonomous Factory AGV Creator.">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sayan Kakkar // Autonomous AI & Robotics Systems">
+  <meta property="og:description" content="Ideas that ship in code, robotics, and hardware.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Local Offline Three.js (100% Reliable Guaranteed Loading) -->
+  <script src="js/three.min.js"></script>
+</head>
+<body>
+
+  <!-- SLY Cinematic Preloader -->
+  <div id="preloader">
+    <div class="loader-top">
+      <div class="loader-brand">SAYAN // KAKKAR</div>
+      <div class="loader-badge">SOSE SHALIMAR BAGH // CLASS 10</div>
+    </div>
+
+    <div class="loader-center">
+      <div class="loader-percentage" id="loader-percent">000%</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-status" id="loader-status">INITIALIZING SYSTEM KERNEL...</div>
+    </div>
+
+    <div class="loader-bottom">
+      <div>PHYSICAL AI &amp; ROBOTICS</div>
+      <div>DELHI, IN</div>
+    </div>
+  </div>
+
+  <!-- Noise & Ambient Visual Layers -->
+  <div class="noise-overlay"></div>
+  <div class="ambient-grid"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+
+  <!-- SLY Magnetic Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-menu">
+    <a href="#about-me">About Sayan</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#agv-showcase">3D AGV Robot</a>
+    <a href="#journey">Journey</a>
+    <a href="#projects">Work</a>
+    <a href="#lab">Robotics Lab</a>
+    <a href="#brief-builder">Project Brief</a>
+    <a href="#terminal-section">Terminal</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="#hero" class="brand-logo">
+          <span>SAYAN</span>
+          <span class="logo-badge">SYSTEMS</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#agv-showcase">3D AGV</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#lab">Lab</a></li>
+          <li><a href="#brief-builder">Brief Studio</a></li>
+          <li><a href="#terminal-section">Terminal</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="sound-btn" id="sound-toggle-btn" title="Toggle Sound FX">
+            <span class="sound-wave">
+              <span></span><span></span><span></span>
+            </span>
+            <span class="sound-state">AUDIO ON</span>
+          </button>
+
+          <a href="https://github.com/sayankakkar-pro" target="_blank" rel="noopener noreferrer" class="btn btn-glass" style="padding: 10px 22px; font-size: 0.8rem;">
+            <span>GITHUB</span>
+          </a>
+
+          <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION (SLY AESTHETIC)
+       ========================================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal-left">
+          <div class="eyebrow-tag">
+            <span class="eyebrow-dot"></span>
+            <span>CURRENTLY BUILDING // SOSE SHALIMAR BAGH // CLASS 10</span>
+          </div>
+
+          <h1 class="hero-title">
+            IDEAS THAT SHIP. <br>
+            <span class="text-peach">IN CODE &amp; HARDWARE.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Sayan Kakkar is an autonomous robotics and AI software developer. Bridging physical robotics, LiDAR navigation, and full-stack software from first principles.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#agv-showcase" class="btn btn-primary">
+              <span>INSPECT 3D AGV VEHICLE</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#about-me" class="btn btn-glass">
+              <span>ABOUT SAYAN</span>
+            </a>
+            <a href="#brief-builder" class="btn btn-peach-outline">
+              <span>BUILD PROJECT BRIEF</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Strip -->
+          <div class="hero-stats-strip">
+            <div class="stat-item">
+              <span class="stat-number text-peach">100 / 33K</span>
+              <span class="stat-label">Delhi Govt IIIT Selection</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5TH</span>
+              <span class="stat-label">Takumi Hackathon</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-peach">3RD</span>
+              <span class="stat-label">Aaroh GameDev</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+ NDA</span>
+              <span class="stat-label">Startups Shipped</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Chromatic Core Canvas -->
+        <div class="hero-3d-stage reveal-right">
+          <div id="hero-canvas-container"></div>
+          <div class="canvas-hud-overlay">
+            <span>KINETIC 3D NODE</span>
+            <button class="hud-pill-btn" id="hero-wireframe-toggle">WIREFRAME</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLY INFINITE CINEMATIC MARQUEE TICKER
+       ========================================== -->
+  <div class="sly-marquee-wrap">
+    <div class="sly-marquee-track">
+      <span class="marquee-item"><span class="marquee-dot"></span> AUTONOMOUS FACTORY VEHICLES</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> TOP 100 / 33,000 IIIT DELHI BOOTCAMP</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 360° RPLIDAR SLAM NAVIGATION</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> TAKUMI HACKATHON 5TH NATIONWIDE</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> AAROH GAMEDEV &amp; PHYSICS 3RD PLACE</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 2X STARTUP PLATFORMS DEPLOYED UNDER NDA</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> ROS 2 HUMBLE &amp; JETSON AI INFERENCE</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item"><span class="marquee-dot"></span> AUTONOMOUS FACTORY VEHICLES</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> TOP 100 / 33,000 IIIT DELHI BOOTCAMP</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 360° RPLIDAR SLAM NAVIGATION</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> TAKUMI HACKATHON 5TH NATIONWIDE</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> AAROH GAMEDEV &amp; PHYSICS 3RD PLACE</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 2X STARTUP PLATFORMS DEPLOYED UNDER NDA</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> ROS 2 HUMBLE &amp; JETSON AI INFERENCE</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       ABOUT ME // DEEP DIVE PRODIGY SPOTLIGHT
+       ========================================== -->
+  <section id="about-me">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>THE DEVELOPER</span>
+        </div>
+        <h2 class="section-title">About Sayan Kakkar.</h2>
+        <p class="section-sub">
+          Class 10 Systems &amp; Robotics Engineer at SOSE Shalimar Bagh. Driven by an obsession with how intelligent software interacts with physical reality.
+        </p>
+      </div>
+
+      <div class="about-spotlight-grid">
+        <!-- Interactive Bio Tabs -->
+        <div class="sly-card about-card-left reveal-left">
+          <div class="about-tabs-nav">
+            <button class="about-tab-btn active" data-tab="story">THE STORY</button>
+            <button class="about-tab-btn" data-tab="philosophy">PHILOSOPHY</button>
+            <button class="about-tab-btn" data-tab="education">EDUCATION</button>
+            <button class="about-tab-btn" data-tab="arsenal">ARSENAL</button>
+          </div>
+
+          <!-- Tab 1: Story -->
+          <div class="about-tab-pane active" id="tab-story">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">Building From First Principles</h3>
+            <p class="text-body" style="font-size: 1rem; line-height: 1.7; margin-bottom: 16px;">
+              I didn't start in robotics by reading textbooks — I started by burning microcontrollers, tearing apart motors, and debugging broken code at 2 AM.
+            </p>
+            <p class="text-body" style="font-size: 1rem; line-height: 1.7;">
+              Currently studying in <strong>Class 10 at SOSE Shalimar Bagh</strong>, I focus on the intersection of <strong>Physical AI, Autonomous Navigation, and High-Speed Web Applications</strong>. I believe that true engineering excellence is proven when your code commands physical hardware in dynamic, unstructured environments.
+            </p>
+          </div>
+
+          <!-- Tab 2: Philosophy -->
+          <div class="about-tab-pane" id="tab-philosophy">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">The Builder's Mindset</h3>
+            <div class="about-quote-box">
+              “Flawless theory on paper means nothing until it survives a real-world test without crashing.”
+            </div>
+            <p class="text-body" style="font-size: 0.98rem; line-height: 1.7;">
+              I test edge cases aggressively. If a robot's obstacle avoidance algorithm hasn't been pushed to high-speed close-proximity obstacles, its safety rating is theoretical. I design systems with hardware-level fail-safes and robust error recovery routines.
+            </p>
+          </div>
+
+          <!-- Tab 3: Education & Selection -->
+          <div class="about-tab-pane" id="tab-education">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">Academic &amp; Boot Camp Track</h3>
+            <p class="text-body" style="font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+              ● <strong>School of Specialized Excellence (SOSE), Shalimar Bagh</strong> — Class 10 (Armed with strong foundations in Mathematics, Computer Science, and Physics).
+            </p>
+            <p class="text-body" style="font-size: 0.98rem; line-height: 1.7;">
+              ● <strong>IIIT Delhi Robotics Boot Camp</strong> — Selected among the top 100 students out of 33,000+ applicants (Top 0.3% tier) statewide in Delhi for a 21-day intensive engineering camp on ROS 2, Cartographer SLAM, and Inverse Kinematics.
+            </p>
+          </div>
+
+          <!-- Tab 4: Daily Arsenal -->
+          <div class="about-tab-pane" id="tab-arsenal">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">Tools &amp; Frameworks</h3>
+            <p class="text-body" style="font-size: 0.98rem; line-height: 1.7;">
+              <strong>Robotics / Hardware:</strong> ROS 2 Humble, RPLiDAR S2, Jetson Nano, ESP32, C++, Encoders.<br>
+              <strong>AI &amp; Vision:</strong> OpenCV, Python, Agentic LLM Orchestration, PyTorch, TEB Local Planner.<br>
+              <strong>Full-Stack:</strong> Next.js, React, Node.js, WebSockets, Three.js WebGL, MongoDB.
+            </p>
+          </div>
+
+          <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+            <div class="font-mono text-muted" style="font-size: 0.8rem;">
+              BASE: <span class="text-peach">DELHI, INDIA</span>
+            </div>
+            <a href="https://github.com/sayankakkar-pro" target="_blank" class="btn btn-peach-outline" style="padding: 8px 18px; font-size: 0.76rem;">
+              <span>VIEW GITHUB</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Key Numerical Milestones -->
+        <div class="sly-card reveal-right" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="eyebrow-tag" style="margin-bottom: 14px;">
+              <span>PROVEN TRACK RECORD</span>
+            </div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 14px;">Metrics of Commitment</h3>
+            <p class="text-body" style="font-size: 0.98rem; line-height: 1.65;">
+              Whether it's competing against thousands of students, engineering factory robotics, or shipping production applications under NDA, I deliver high-impact results.
+            </p>
+          </div>
+
+          <div class="stats-counter-list">
+            <div class="counter-box">
+              <div class="counter-num">0.3%</div>
+              <div class="counter-desc">Delhi Govt Selectivity (100 / 33,000)</div>
+            </div>
+            <div class="counter-box">
+              <div class="counter-num">5TH</div>
+              <div class="counter-desc">Takumi Hackathon Nationwide</div>
+            </div>
+            <div class="counter-box">
+              <div class="counter-num">3RD</div>
+              <div class="counter-desc">Aaroh India GameDev &amp; Physics</div>
+            </div>
+            <div class="counter-box">
+              <div class="counter-num">150 KG</div>
+              <div class="counter-desc">Factory AGV Payload Capacity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHAT I BUILD (SLY 4-CARD MATRIX)
+       ========================================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>CAPABILITY DOMAINS</span>
+        </div>
+        <h2 class="section-title">What I Build.</h2>
+        <p class="section-sub">
+          Moving beyond theoretical concepts to engineer real-world systems at the intersection of AI, firmware, and physical hardware.
+        </p>
+      </div>
+
+      <div class="feature-matrix-grid">
+        <div class="feature-box reveal-left">
+          <div class="feature-num">01</div>
+          <h3 class="feature-title">Autonomous Robotics &amp; AGVs</h3>
+          <p class="feature-desc">
+            Autonomous Guided Vehicles (AGVs) engineered for industrial logistics. Full-stack implementation of 360° LiDAR SLAM mapping, sensor fusion, obstacle avoidance state machines, and closed-loop motor velocity control.
+          </p>
+        </div>
+
+        <div class="feature-box reveal-right">
+          <div class="feature-num">02</div>
+          <h3 class="feature-title">Artificial Intelligence &amp; Agents</h3>
+          <p class="feature-desc">
+            High-reasoning agentic workflows, autonomous tool orchestration, real-time computer vision obstacle segmentation, and low-latency inference pipelines running directly on edge hardware.
+          </p>
+        </div>
+
+        <div class="feature-box reveal-left">
+          <div class="feature-num">03</div>
+          <h3 class="feature-title">Full-Stack &amp; Cloud Systems</h3>
+          <p class="feature-desc">
+            Production-grade web platforms and responsive user interfaces. Scalable WebSocket backends, real-time telemetry dashboards, and cloud applications designed and shipped for startups under NDA.
+          </p>
+        </div>
+
+        <div class="feature-box reveal-right">
+          <div class="feature-num">04</div>
+          <h3 class="feature-title">High-Velocity Competition</h3>
+          <p class="feature-desc">
+            Rapid problem diagnosis, architecture synthesis, and high-pressure execution tested across statewide competitive examinations and national hackathons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE SIGNAL (LIVE DASHBOARD)
+       ========================================== -->
+  <section id="signal">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>SYSTEM ACTIVE</span>
+        </div>
+        <h2 class="section-title">The Signal.</h2>
+        <p class="section-sub">Live telemetry, current technical focus, and active development indicators.</p>
+      </div>
+
+      <div class="signal-grid">
+        <div class="signal-card span-2 reveal-left">
+          <span class="signal-label">Current Focus</span>
+          <div class="signal-value text-peach">Autonomous Factory AGVs &amp; Edge AI</div>
+        </div>
+
+        <div class="signal-card reveal-right">
+          <span class="signal-label">Status</span>
+          <div class="signal-value text-emerald">● Currently Building</div>
+        </div>
+
+        <div class="signal-card reveal-left">
+          <span class="signal-label">School &amp; Grade</span>
+          <div class="signal-value">SOSE Shalimar Bagh <span class="text-peach" style="font-size: 1rem; display: block; font-weight: 500;">Class 10 Student</span></div>
+        </div>
+
+        <div class="signal-card reveal-on-scroll">
+          <span class="signal-label">Lines Written (est.)</span>
+          <div class="signal-value">35,000+</div>
+        </div>
+
+        <div class="signal-card reveal-right">
+          <span class="signal-label">Core Stack</span>
+          <div class="signal-value" style="font-size: 1.2rem; font-family: var(--font-mono); color: var(--peach);">Python / C++ / Next.js / ROS 2</div>
+        </div>
+
+        <div class="signal-card span-3 reveal-on-scroll">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: gap: 16px;">
+            <div>
+              <span class="signal-label" style="color: var(--peach);">Client Work — Confidential</span>
+              <div class="signal-value" style="font-size: 1.4rem; margin-bottom: 8px;">Built &amp; Shipped 2 Production Web Platforms</div>
+              <p class="text-body" style="font-size: 0.94rem; max-width: 800px;">
+                Engineered production web applications for two venture startups under non-disclosure agreements. Focused on ultra-responsive UI, serverless APIs, and resilient data layers.
+              </p>
+            </div>
+            <span class="sly-pill peach" style="align-self: flex-start;">NDA VERIFIED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       HALL OF ACHIEVEMENTS
+       ========================================== -->
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>HALL OF ACHIEVEMENTS</span>
+        </div>
+        <h2 class="section-title">The Moments That Pushed Me Further.</h2>
+        <p class="section-sub">Proven performance under statewide selection examinations, national hackathons, and real-world engineering challenges.</p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Spotlight Card: Delhi Govt Selection -->
+        <div class="sly-card achievement-spotlight reveal-on-scroll">
+          <div class="spotlight-layout">
+            <div>
+              <div class="eyebrow-tag" style="margin-bottom: 12px;">
+                <span>STATEWIDE COMPETITIVE SELECTION</span>
+              </div>
+              <h3 style="font-size: 2.3rem; font-weight: 700; margin-bottom: 14px; line-height: 1.1;">
+                Delhi Govt Top 100 / 33,000 Selection
+              </h3>
+              <p class="text-body" style="font-size: 1.05rem; line-height: 1.65;">
+                Selected through a statewide competitive examination representing the top <strong>0.3% tier</strong> among 33,000+ applicants across Delhi for the prestigious <strong>21-Day Intensive Robotics Boot Camp at IIIT Delhi</strong>.
+              </p>
+
+              <div class="tag-pills-row">
+                <span class="sly-pill peach">IIIT Delhi</span>
+                <span class="sly-pill peach">Top 0.3% Selectivity</span>
+                <span class="sly-pill">Autonomous Navigation</span>
+                <span class="sly-pill">Inverse Kinematics</span>
+                <span class="sly-pill">Computer Vision</span>
+                <span class="sly-pill">ROS 2</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="spotlight-stats-row">
+                <div>
+                  <div class="stat-figure text-peach">33K+</div>
+                  <div class="stat-sublabel">Applicants Appeared</div>
+                </div>
+                <div>
+                  <div class="stat-figure">100</div>
+                  <div class="stat-sublabel">Students Selected</div>
+                </div>
+                <div>
+                  <div class="stat-figure text-peach">21</div>
+                  <div class="stat-sublabel">Days Boot Camp</div>
+                </div>
+              </div>
+              <div class="font-mono text-muted" style="font-size: 0.8rem; text-align: center;">
+                ● Hosted &amp; Mentored at Indraprastha Institute of Information Technology (IIIT Delhi)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Takumi Hackathon -->
+        <div class="sly-card achievement-half reveal-left">
+          <div>
+            <div class="eyebrow-tag">
+              <span>NATIONAL HACKATHON</span>
+            </div>
+            <div class="rank-display text-peach">
+              5TH <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 500;">PLACE</span>
+            </div>
+            <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px;">Takumi Hackathon</h3>
+            <p class="text-body" style="font-size: 1rem; line-height: 1.65;">
+              Secured 5th position nationwide competing against multi-disciplinary engineering teams, building high-speed autonomous software and full-stack solutions under time constraints.
+            </p>
+          </div>
+          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06);" class="font-mono text-peach" style="font-size: 0.82rem;">
+            ● Rapid Prototyping &amp; Real-Time Architecture
+          </div>
+        </div>
+
+        <!-- Aaroh India Hackathon -->
+        <div class="sly-card achievement-half reveal-right">
+          <div>
+            <div class="eyebrow-tag">
+              <span>GAME DEV &amp; PHYSICS SIMULATION</span>
+            </div>
+            <div class="rank-display">
+              3RD <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: 500;">PLACE</span>
+            </div>
+            <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px;">Aaroh India Hackathon</h3>
+            <p class="text-body" style="font-size: 1rem; line-height: 1.65;">
+              Awarded 3rd place in Game Development &amp; Physics Simulation, implementing custom collision detection algorithms, 60fps render pipelines, and dynamic gameplay loops.
+            </p>
+          </div>
+          <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06);" class="font-mono text-muted" style="font-size: 0.82rem;">
+            ● Custom Physics Engine &amp; Entity Component Architecture
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FLAGSHIP 3D AUTONOMOUS AGV SHOWCASE
+       ========================================== -->
+  <section id="agv-showcase">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>FLAGSHIP ROBOTICS PROJECT</span>
+        </div>
+        <h2 class="section-title">Autonomous Factory Transport Vehicle (AGV).</h2>
+        <p class="section-sub">
+          Interactive 3D digital twin of my autonomous factory logistics vehicle. Rotate, zoom, explode subsystems, and inspect real-time ROS 2 telemetry.
+        </p>
+      </div>
+
+      <div class="agv-layout-grid">
+        <!-- 3D Viewport -->
+        <div class="agv-viewport-card reveal-left">
+          <div class="agv-viewport-controls">
+            <button class="btn btn-peach-outline" id="agv-explode-btn" style="padding: 8px 18px; font-size: 0.76rem;">
+              <span>EXPLODE BLUEPRINT</span>
+            </button>
+            <button class="btn btn-glass" id="agv-wireframe-btn" style="padding: 8px 18px; font-size: 0.76rem;">
+              <span>TOGGLE X-RAY</span>
+            </button>
+          </div>
+
+          <div id="agv-3d-container"></div>
+
+          <div class="agv-subsystem-bar">
+            <button class="subsystem-btn active" data-subsystem="lidar">LiDAR 360°</button>
+            <button class="subsystem-btn" data-subsystem="brain">Jetson AI Brain</button>
+            <button class="subsystem-btn" data-subsystem="chassis">Chassis</button>
+            <button class="subsystem-btn" data-subsystem="wheels">Differential Drive</button>
+            <button class="subsystem-btn" data-subsystem="battery">Power Unit</button>
+            <button class="subsystem-btn" data-subsystem="sensors">Ultrasonic Array</button>
+          </div>
+        </div>
+
+        <!-- Subsystem Telemetry HUD Pane -->
+        <div class="agv-detail-card reveal-right">
+          <div id="agv-subsystem-detail">
+            <!-- Populated dynamically by three-agv.js -->
+          </div>
+
+          <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
+            <div class="font-mono text-muted" style="font-size: 0.8rem;">
+              DRIVE MODE: <span class="text-peach">AUTONOMOUS PATROL</span>
+            </div>
+            <a href="#lab" class="btn btn-peach-outline" style="padding: 8px 16px; font-size: 0.76rem;">
+              <span>TEST PID IN LAB</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE JOURNEY (TIMELINE)
+       ========================================== -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>EVOLUTION</span>
+        </div>
+        <h2 class="section-title">The Journey So Far.</h2>
+        <p class="section-sub">Chronological path of experimenting, breaking things, and leveling up engineering depth.</p>
+      </div>
+
+      <div class="timeline-wrap reveal-on-scroll">
+        <div class="timeline-item">
+          <div class="timeline-tag">01 // FOUNDATION</div>
+          <h3 class="timeline-heading">Understanding the Basics</h3>
+          <p class="timeline-text">
+            As a student at SOSE Shalimar Bagh, started mastering Python, C++, and web technologies. Realized that code becomes infinitely more exciting when connected to real problems.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-tag">02 // HARDWARE & SENSORS</div>
+          <h3 class="timeline-heading">First Embedded Systems</h3>
+          <p class="timeline-text">
+            Combined software with microcontrollers (ESP32 & Arduino). Built sensor networks, motor drivers, and low-latency communication buses to control physical mechanisms.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-tag">03 // ELITE SELECTION</div>
+          <h3 class="timeline-heading">IIIT Delhi 21-Day Robotics Boot Camp</h3>
+          <p class="timeline-text">
+            Selected in the top 100 out of 33,000+ candidates across Delhi State. Completed intensive training in ROS 2, SLAM navigation, inverse kinematics, and autonomous computer vision.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-tag">04 // COMPETITIVE PODIUMS</div>
+          <h3 class="timeline-heading">Hackathons & High-Pressure Builds</h3>
+          <p class="timeline-text">
+            Secured 5th place in Takumi Hackathon nationwide and 3rd place in Aaroh India Hackathon (Game Dev & Physics Engine). Mastered high-speed development and pitching under deadline pressure.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-tag">05 // PRODUCTION MILESTONE</div>
+          <h3 class="timeline-heading">Autonomous Factory Transport Vehicle &amp; Startups</h3>
+          <p class="timeline-text">
+            Designed and built an industrial factory AGV with 360° LiDAR SLAM mapping and deployed 2 full-stack web platforms for startups under NDA. Always building. Always shipping.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED PROJECTS & REPOSITORIES
+       ========================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>SELECTED WORK</span>
+        </div>
+        <h2 class="section-title">Engineered &amp; Shipped Systems.</h2>
+        <p class="section-sub">A curated selection of real-world hardware prototypes, AI agent orchestrators, and production web platforms.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: AGV -->
+        <div class="sly-card project-card reveal-left">
+          <div>
+            <div class="project-tag-strip">
+              <span class="project-category text-peach">ROBOTICS / SLAM</span>
+              <span class="font-mono text-muted" style="font-size: 0.75rem;">PHYSICAL HW</span>
+            </div>
+            <h3 class="project-name">Factory AGV Transport</h3>
+            <p class="project-desc">
+              Autonomous mobile transport vehicle built for factory floor logistics, integrating RPLiDAR SLAM, differential kinematics, and safety collision avoidance.
+            </p>
+          </div>
+          <div>
+            <div class="project-tech-list">
+              <span class="tech-tag">ROS 2</span>
+              <span class="tech-tag">LiDAR</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Jetson</span>
+            </div>
+            <a href="#agv-showcase" class="btn btn-peach-outline" style="width: 100%; padding: 12px;">
+              <span>INSPECT 3D MODEL</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Aaroh Game Engine -->
+        <div class="sly-card project-card reveal-on-scroll">
+          <div>
+            <div class="project-tag-strip">
+              <span class="project-category text-peach">SIMULATION / GAME DEV</span>
+              <span class="font-mono text-muted" style="font-size: 0.75rem;">3RD PLACE</span>
+            </div>
+            <h3 class="project-name">Aaroh Physics Engine</h3>
+            <p class="project-desc">
+              Custom-built 2D/3D physics sandbox and game loop featuring spatial partitioning, particle systems, and real-time rigid body dynamics.
+            </p>
+          </div>
+          <div>
+            <div class="project-tech-list">
+              <span class="tech-tag">Canvas</span>
+              <span class="tech-tag">WebGL</span>
+              <span class="tech-tag">Physics Loop</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/sayankakkar-pro" target="_blank" class="btn btn-glass" style="width: 100%; padding: 12px;">
+              <span>VIEW GITHUB REPO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Startup Client Deployments -->
+        <div class="sly-card project-card reveal-right">
+          <div>
+            <div class="project-tag-strip">
+              <span class="project-category text-peach">CLIENT SYSTEMS</span>
+              <span class="font-mono text-peach" style="font-size: 0.75rem;">● NDA VERIFIED</span>
+            </div>
+            <h3 class="project-name">2x Startup Production Apps</h3>
+            <p class="project-desc">
+              Designed and built full-stack production platforms for two startup clients. High-speed serverless architecture, modern UI, and database orchestration.
+            </p>
+          </div>
+          <div>
+            <div class="project-tech-list">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">APIs</span>
+            </div>
+            <div class="btn btn-glass" style="width: 100%; padding: 12px; opacity: 0.8; cursor: default;">
+              <span>DEPLOYED IN PRODUCTION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE ROBOTICS & AI LAB (LIVE PLAYGROUNDS)
+       ========================================== -->
+  <section id="lab">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>INTERACTIVE SANDBOX</span>
+        </div>
+        <h2 class="section-title">The Engineering Lab.</h2>
+        <p class="section-sub">Directly test robotics algorithms in real time right in your browser.</p>
+      </div>
+
+      <div class="lab-grid">
+        <!-- Lab 1: PID Controller Simulator -->
+        <div class="sly-card reveal-left">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+            <h3 style="font-size: 1.45rem; font-weight: 700;">PID Trajectory Controller</h3>
+            <span class="sly-pill peach">LIVE SIM</span>
+          </div>
+          <p class="text-body" style="font-size: 0.92rem; margin-bottom: 18px;">
+            Tune Proportional, Integral, and Derivative gains to see how the AGV corrects its trajectory along changing waypoints.
+          </p>
+
+          <div class="lab-canvas-wrap">
+            <canvas id="pid-canvas"></canvas>
+          </div>
+
+          <div class="lab-controls-panel">
+            <div class="control-slider-group">
+              <label>Kp Gain:</label>
+              <input type="range" id="pid-kp" min="0.1" max="5.0" step="0.1" value="1.8">
+              <span id="kp-val">1.80</span>
+            </div>
+            <div class="control-slider-group">
+              <label>Ki Gain:</label>
+              <input type="range" id="pid-ki" min="0.0" max="0.2" step="0.005" value="0.04">
+              <span id="ki-val">0.040</span>
+            </div>
+            <div class="control-slider-group">
+              <label>Kd Gain:</label>
+              <input type="range" id="pid-kd" min="0.1" max="3.0" step="0.05" value="0.95">
+              <span id="kd-val">0.95</span>
+            </div>
+
+            <div class="preset-btns-row">
+              <span class="font-mono text-muted" style="font-size: 0.74rem; align-self: center;">PRESETS:</span>
+              <button class="pid-preset-btn" data-preset="optimal">Optimally Damped</button>
+              <button class="pid-preset-btn" data-preset="oscillate">Underdamped Oscillation</button>
+              <button class="pid-preset-btn" data-preset="sluggish">Overdamped Sluggish</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab 2: 2D LiDAR Obstacle Avoidance Radar -->
+        <div class="sly-card reveal-right">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+            <h3 style="font-size: 1.45rem; font-weight: 700;">2D LiDAR Collision Radar</h3>
+            <span class="sly-pill peach">360° RADAR</span>
+          </div>
+          <p class="text-body" style="font-size: 0.92rem; margin-bottom: 18px;">
+            Click to spawn obstacles or drag the hazard nodes to see 360° laser rays calculate safety proximity zones.
+          </p>
+
+          <div class="lab-canvas-wrap">
+            <canvas id="radar-canvas"></canvas>
+          </div>
+
+          <div class="font-mono text-muted" style="font-size: 0.8rem; display: flex; justify-content: space-between;">
+            <span>● Click canvas: Spawn obstacle</span>
+            <span>● Drag circle: Relocate obstacle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLY BRIEF STUDIO / DROP AN IDEA CONFIGURATOR
+       ========================================== -->
+  <section id="brief-builder">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>INTERACTIVE PRODUCT CONFIGURATOR</span>
+        </div>
+        <h2 class="section-title">Drop An Idea // Brief Studio.</h2>
+        <p class="section-sub">Configure your engineering proposal, scope, and technical stack to generate an instant architecture blueprint.</p>
+      </div>
+
+      <div class="sly-card reveal-on-scroll" style="max-width: 980px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;">
+          <div>
+            <div class="eyebrow-tag" style="margin-bottom: 12px;">STEP 01 // DOMAIN</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+              <button class="brief-option-btn active" data-type="Autonomous AGV Logistics">Autonomous AGV Logistics</button>
+              <button class="brief-option-btn" data-type="Edge AI & Computer Vision">Edge AI &amp; Computer Vision</button>
+              <button class="brief-option-btn" data-type="Full-Stack Web Platform">Full-Stack Web Platform</button>
+              <button class="brief-option-btn" data-type="National Hackathon Collaboration">Hackathon Lead</button>
+            </div>
+
+            <div class="eyebrow-tag" style="margin-bottom: 12px;">STEP 02 // TIMELINE & SPEED</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+              <button class="brief-timeline-btn active" data-time="Rapid Sprint (1-2 Weeks)">Rapid Sprint (1-2 Wks)</button>
+              <button class="brief-timeline-btn" data-time="Production Build (1 Month)">Production Build (1 Mo)</button>
+              <button class="brief-timeline-btn" data-time="Long-Term R&D">Long-Term R&amp;D</button>
+            </div>
+
+            <div class="eyebrow-tag" style="margin-bottom: 12px;">STEP 03 // HARDWARE LEVEL</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <button class="brief-hw-btn active" data-hw="Physical Microcontroller + ROS 2">ROS 2 + Physical HW</button>
+              <button class="brief-hw-btn" data-hw="Pure Software & Cloud">Pure Software &amp; Cloud</button>
+              <button class="brief-hw-btn" data-hw="Physics Simulation & WebGL">WebGL Physics Simulation</button>
+            </div>
+          </div>
+
+          <!-- Generated Architecture Blueprint Output Card -->
+          <div style="background: rgba(0,0,0,0.6); border: 1px solid var(--peach-border); border-radius: 1rem; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <span class="font-mono text-peach" style="font-size: 0.76rem;">● FEASIBILITY: 100% READY</span>
+                <span class="sly-pill peach" style="font-size: 0.72rem;">SAYAN CERTIFIED</span>
+              </div>
+              <h3 id="brief-summary-title" style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: #fff;">
+                Autonomous AGV Logistics
+              </h3>
+              <p id="brief-summary-desc" class="text-body" style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px;">
+                Architecture includes 360° RPLiDAR S2 SLAM navigation, ROS 2 Humble node orchestration, TEB local trajectory planner, and safety fallback loop.
+              </p>
+              <div class="font-mono text-muted" style="font-size: 0.78rem;" id="brief-meta-output">
+                ESTIMATED TIMELINE: Rapid Sprint (1-2 Weeks)<br>
+                CORE PIPELINE: ROS 2 + Physical HW
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary" style="margin-top: 24px; width: 100%;">
+              <span>TRANSMIT THIS PROPOSAL &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CYBER TERMINAL CONSOLE
+       ========================================== -->
+  <section id="terminal-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>CLI SYSTEM ACCESS</span>
+        </div>
+        <h2 class="section-title">SAYAN-OS Terminal Shell.</h2>
+        <p class="section-sub">Query developer kernel metrics, robotics specs, and system records.</p>
+      </div>
+
+      <div class="terminal-window reveal-on-scroll" id="cyber-terminal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <div class="terminal-title">sayan@kernel:~ (zsh)</div>
+          <div class="font-mono text-peach" style="font-size: 0.75rem;" id="telemetry-clock">--:--:-- UTC+5:30</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-output">
+          <!-- Terminal lines generated dynamically -->
+        </div>
+
+        <div class="cmd-chips-row">
+          <span class="font-mono text-muted" style="font-size: 0.74rem; align-self: center;">QUICK COMMANDS:</span>
+          <button class="cmd-chip" data-cmd="achievements">achievements</button>
+          <button class="cmd-chip" data-cmd="agv">agv</button>
+          <button class="cmd-chip" data-cmd="skills">skills</button>
+          <button class="cmd-chip" data-cmd="about">about</button>
+          <button class="cmd-chip" data-cmd="contact">contact</button>
+          <button class="cmd-chip" data-cmd="matrix">matrix</button>
+          <button class="cmd-chip" data-cmd="clear">clear</button>
+        </div>
+
+        <div style="padding: 14px 24px; background: #08080a; border-top: 1px solid rgba(255,255,255,0.06);">
+          <div class="terminal-input-row">
+            <span class="terminal-prompt">sayan@dev:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. help, achievements, agv)..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PHILOSOPHIES & BELIEFS
+       ========================================== -->
+  <section id="philosophies">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>ENGINEERING MANIFESTO</span>
+        </div>
+        <h2 class="section-title">Core Philosophies.</h2>
+        <p class="section-sub">Principles forged through broken prototypes, late-night debugging, and hackathon wins.</p>
+      </div>
+
+      <div class="beliefs-list">
+        <div class="sly-card belief-card reveal-on-scroll">
+          <div class="belief-num">01</div>
+          <div>
+            <div class="belief-quote">“Build first. Broken prototypes teach faster than flawless theory.”</div>
+            <div class="belief-desc">I learn ten times more from a broken motor or failed API than from a textbook diagram that was never tested.</div>
+          </div>
+        </div>
+
+        <div class="sly-card belief-card reveal-on-scroll">
+          <div class="belief-num">02</div>
+          <div>
+            <div class="belief-quote">“Break things on purpose.”</div>
+            <div class="belief-desc">If your system hasn't crashed under extreme load, you don't know where its true physical limits lie.</div>
+          </div>
+        </div>
+
+        <div class="sly-card belief-card reveal-on-scroll">
+          <div class="belief-num">03</div>
+          <div>
+            <div class="belief-quote">“Software alone isn't enough.”</div>
+            <div class="belief-desc">The most captivating engineering happens right at the boundary where intelligent code commands physical actuators.</div>
+          </div>
+        </div>
+
+        <div class="sly-card belief-card reveal-on-scroll">
+          <div class="belief-num">04</div>
+          <div>
+            <div class="belief-quote">“Compete to evolve.”</div>
+            <div class="belief-desc">Hackathons force you to synthesize architecture, eliminate bottlenecks, and ship under pressure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CAPABILITIES & TECH MATRIX
+       ========================================== -->
+  <section id="capabilities">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="eyebrow-tag">
+          <span class="eyebrow-dot"></span>
+          <span>TECHNICAL MATRIX</span>
+        </div>
+        <h2 class="section-title">Full-Stack Capabilities.</h2>
+        <p class="section-sub">Comprehensive toolkit spanning hardware, low-level firmware, AI agent pipelines, and modern web architectures.</p>
+      </div>
+
+      <div class="sly-card reveal-on-scroll">
+        <div class="matrix-grid">
+          <div>
+            <div class="matrix-col-title text-peach">LANGUAGES</div>
+            <ul class="matrix-list">
+              <li>Python</li>
+              <li>JavaScript (ES6+)</li>
+              <li>TypeScript</li>
+              <li>C / C++ (Embedded)</li>
+              <li>HTML5 &amp; Modern CSS</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="matrix-col-title text-white">SOFTWARE &amp; WEB</div>
+            <ul class="matrix-list">
+              <li>React.js &amp; Next.js</li>
+              <li>Node.js &amp; Express</li>
+              <li>REST APIs &amp; WebSockets</li>
+              <li>MongoDB &amp; PostgreSQL</li>
+              <li>Git &amp; GitHub Versioning</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="matrix-col-title text-peach">ROBOTICS &amp; HW</div>
+            <ul class="matrix-list">
+              <li>ROS 2 / ROS Humble</li>
+              <li>RPLiDAR SLAM Navigation</li>
+              <li>ESP32 &amp; Arduino Microcontrollers</li>
+              <li>PID Closed-Loop Velocity Control</li>
+              <li>Ultrasonic &amp; TOF Sensor Arrays</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="matrix-col-title text-white">AI &amp; AUTOMATION</div>
+            <ul class="matrix-list">
+              <li>Agentic LLM Workflows</li>
+              <li>Computer Vision (OpenCV)</li>
+              <li>Intelligent Task Automation</li>
+              <li>Sensor Fusion (Kalman Filters)</li>
+              <li>Telemetry Dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT & DISPATCH CENTER
+       ========================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal-left">
+          <div class="eyebrow-tag">
+            <span class="eyebrow-dot"></span>
+            <span>GET IN TOUCH</span>
+          </div>
+          <h2 class="section-title">Let's Build Something Great.</h2>
+          <p class="section-sub">
+            Have an ambitious robotics project, hackathon collaboration, or engineering challenge? Reach out directly.
+          </p>
+
+          <div class="contact-direct-cards">
+            <!-- Email -->
+            <a href="mailto:sayankakkar@gmail.com" class="contact-item-card copy-email-btn" title="Click to copy email">
+              <div class="contact-icon-text">
+                <span class="sly-pill peach">EMAIL</span>
+                <div>
+                  <div class="lbl">Direct Inbox (Click to copy)</div>
+                  <div class="val text-peach">sayankakkar@gmail.com</div>
+                </div>
+              </div>
+              <span class="font-mono text-peach" style="font-size: 0.85rem;">COPY &rarr;</span>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:7042368060" class="contact-item-card">
+              <div class="contact-icon-text">
+                <span class="sly-pill" style="border-color: rgba(255,255,255,0.15); color: #fff;">PHONE</span>
+                <div>
+                  <div class="lbl">Voice / Direct</div>
+                  <div class="val">7042368060</div>
+                </div>
+              </div>
+              <span class="font-mono text-muted" style="font-size: 0.85rem;">CALL &rarr;</span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/sayankakkar-pro" target="_blank" rel="noopener noreferrer" class="contact-item-card">
+              <div class="contact-icon-text">
+                <span class="sly-pill peach">GITHUB</span>
+                <div>
+                  <div class="lbl">Repositories &amp; Code</div>
+                  <div class="val text-peach">github.com/sayankakkar-pro</div>
+                </div>
+              </div>
+              <span class="font-mono text-peach" style="font-size: 0.85rem;">EXPLORE &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dispatch Message Form -->
+        <div class="sly-card reveal-right">
+          <h3 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 20px;">Send A Dispatch</h3>
+          <form id="cyber-contact-form" class="contact-form-wrap">
+            <div class="form-group">
+              <label for="contact-name">Your Name / Organization</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex // Robotics Lead" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Your Email Endpoint</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="alex@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Message</label>
+              <textarea id="contact-msg" class="form-textarea" placeholder="Describe your project, proposal, or question..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>TRANSMIT DISPATCH</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div>
+          <strong class="text-white">SAYAN KAKKAR</strong> // Class 10 Systems &amp; Robotics Developer // SOSE Shalimar Bagh
+        </div>
+        <div id="telemetry-uptime">
+          UPTIME: ONLINE
+        </div>
+        <div>
+          Built with Three.js WebGL &amp; Precision Craftsmanship
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/three-hero.js"></script>
+  <script src="js/three-agv.js"></script>
+  <script src="js/pid-lab.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

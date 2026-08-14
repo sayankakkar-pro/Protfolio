@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, Send, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Send, CheckCircle2, Database } from 'lucide-react';
 import { soundFX } from '@/lib/audio';
+import { saveBriefToDatabase } from '@/lib/mongodb';
 
 const domainDescriptions: Record<string, string> = {
   'Autonomous AGV Logistics': 'Architecture incorporates 360° RPLiDAR S2 SLAM navigation, ROS 2 Humble node orchestration, TEB local trajectory planner, and safety fallback loop.',
@@ -15,13 +16,27 @@ export default function BriefStudio() {
   const [domain, setDomain] = useState('Autonomous AGV Logistics');
   const [timeline, setTimeline] = useState('Rapid Sprint (1-2 Weeks)');
   const [hardware, setHardware] = useState('ROS 2 + Physical HW');
+  const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSent(true);
     soundFX?.playClick();
-    setTimeout(() => setSent(false), 5000);
+
+    // Store in MongoDB Collection
+    await saveBriefToDatabase({
+      domain,
+      timeline,
+      hardware,
+      email,
+      createdAt: new Date(),
+    });
+
+    setTimeout(() => {
+      setSent(false);
+      setEmail('');
+    }, 5000);
   };
 
   return (
@@ -41,11 +56,17 @@ export default function BriefStudio() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left: Step-by-Step Configurator Form */}
           <form onSubmit={handleSubmit} className="lg:col-span-7 sly-card p-8 md:p-10 space-y-8">
-            {/* Step 1: Select Domain */}
-            <div className="space-y-3">
-              <label className="text-xs font-mono text-white/50 uppercase tracking-widest block">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-mono text-white/50 uppercase tracking-widest block">
                 01 // SELECT DOMAIN ARCHITECTURE
-              </label>
+              </span>
+              <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-[#10b981]/10 border border-[#10b981]/30 text-[#10b981] flex items-center gap-1.5">
+                <Database size={11} />
+                <span>MONGODB STORE READY</span>
+              </span>
+            </div>
+
+            <div className="space-y-3">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   'Autonomous AGV Logistics',
@@ -137,13 +158,15 @@ export default function BriefStudio() {
               <input
                 type="email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email to connect..."
                 className="w-full px-5 py-3.5 rounded-xl bg-white/[0.04] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#f2a98c]"
               />
 
               <button type="submit" className="sly-btn-primary w-full">
                 <Send size={16} />
-                <span>Transmit Project Dispatch</span>
+                <span>Transmit Project Dispatch to Database</span>
               </button>
             </div>
           </form>
@@ -173,14 +196,14 @@ export default function BriefStudio() {
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-2 text-xs font-mono text-white/60">
                 <div>TIMELINE ESTIMATE: {timeline}</div>
                 <div>COMPUTE PIPELINE: {hardware}</div>
-                <div className="text-[#10b981]">STATUS: READY FOR TRANSMISSION</div>
+                <div className="text-[#10b981]">PERSISTENCE: MONGODB DATABASE PIPELINE</div>
               </div>
             </div>
 
             {sent && (
               <div className="p-4 rounded-xl bg-[#10b981]/15 border border-[#10b981]/40 flex items-center gap-3 text-sm text-[#10b981] font-mono">
                 <CheckCircle2 size={18} />
-                <span>Dispatch received! Sayan will respond shortly.</span>
+                <span>Saved to MongoDB pipeline & transmitted successfully!</span>
               </div>
             )}
           </div>

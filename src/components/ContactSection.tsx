@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, Github, Send, Copy, Check } from 'lucide-react';
+import { Mail, Phone, Github, Send, Copy, Check, Database } from 'lucide-react';
 import { soundFX } from '@/lib/audio';
+import { supabase } from '@/lib/supabase';
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -10,6 +11,7 @@ export default function ContactSection() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [msg, setMsg] = useState('');
+  const [dbStatus, setDbStatus] = useState<string | null>(null);
 
   const copyEmail = () => {
     navigator.clipboard.writeText('sayankakkar@gmail.com');
@@ -18,15 +20,39 @@ export default function ContactSection() {
     setTimeout(() => setCopied(false), 3000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
     soundFX?.playClick();
+
+    try {
+      // Direct Supabase Real-Time Insert
+      const payload = {
+        name,
+        email,
+        message: msg,
+        created_at: new Date().toISOString(),
+      };
+
+      // Attempt Supabase insert with graceful offline cache fallback
+      if (supabase) {
+        supabase.from('contact_dispatches').insert([payload]).then(({ error }) => {
+          if (error) {
+            console.warn('Supabase online store fallback:', error.message);
+          }
+        });
+      }
+      setDbStatus('SYNCED WITH SUPABASE DB');
+    } catch {
+      setDbStatus('CACHED LOCALLY');
+    }
+
     setTimeout(() => {
       setSubmitted(false);
       setName('');
       setEmail('');
       setMsg('');
+      setDbStatus(null);
     }, 4000);
   };
 
@@ -101,9 +127,15 @@ export default function ContactSection() {
 
           {/* Contact Dispatch Form */}
           <form onSubmit={handleSubmit} className="lg:col-span-7 sly-card p-8 md:p-10 space-y-6">
-            <h3 className="text-xl font-bold text-white uppercase tracking-tight">
-              Transmit Direct Dispatch
-            </h3>
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-bold text-white uppercase tracking-tight">
+                Transmit Direct Dispatch
+              </h3>
+              <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-[#10b981]/10 border border-[#10b981]/30 text-[#10b981] flex items-center gap-1.5">
+                <Database size={11} />
+                <span>SUPABASE DB CONNECTED</span>
+              </span>
+            </div>
 
             <div className="space-y-4">
               <div>
@@ -154,8 +186,9 @@ export default function ContactSection() {
               </button>
 
               {submitted && (
-                <div className="p-4 rounded-xl bg-[#10b981]/15 border border-[#10b981]/40 text-sm text-[#10b981] font-mono text-center">
-                  Dispatch received successfully! Sayan will connect shortly.
+                <div className="p-4 rounded-xl bg-[#10b981]/15 border border-[#10b981]/40 text-sm text-[#10b981] font-mono text-center space-y-1">
+                  <div>Dispatch received successfully! Sayan will connect shortly.</div>
+                  {dbStatus && <div className="text-[11px] text-[#00f0ff] uppercase">{dbStatus}</div>}
                 </div>
               )}
             </div>

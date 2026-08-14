@@ -3,7 +3,10 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Github, Send, Copy, Check, Database } from 'lucide-react';
 import { soundFX } from '@/lib/audio';
-import { supabase } from '@/lib/supabase';
+
+const SUPABASE_URL = 'https://osoczjnrbuhhqpcfcxck.supabase.co';
+const SUPABASE_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zb2N6am5yYnVoaHFwY2ZjeGNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2ODI1NDksImV4cCI6MjEwMjI1ODU0OX0.X7o9czhK_dHxDBE-hlBTJqLdeejn2a0dHp7e7rbkSwU';
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -26,24 +29,35 @@ export default function ContactSection() {
     soundFX?.playClick();
 
     const payload = {
-      name,
-      email,
-      message: msg,
+      name: name.trim(),
+      email: email.trim(),
+      message: msg.trim(),
       created_at: new Date().toISOString(),
     };
 
     try {
-      if (supabase) {
-        const { error } = await supabase.from('contact_dispatches').insert([payload]);
-        if (!error) {
-          setDbStatus('SYNCED DIRECTLY TO SUPABASE DB');
-        } else {
-          console.log('Supabase insert status:', error.message);
-          setDbStatus('SAVED TO LOCAL ENGINE');
-        }
+      // Direct REST API call to Supabase
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/contact_dispatches`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: SUPABASE_KEY,
+          Authorization: `Bearer ${SUPABASE_KEY}`,
+          Prefer: 'return=minimal',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setDbStatus('SYNCED DIRECTLY TO SUPABASE DB');
+      } else {
+        const errText = await res.text();
+        console.warn('Supabase REST status:', res.status, errText);
+        setDbStatus('SAVED TO LOCAL PERSISTENCE');
       }
-    } catch {
-      setDbStatus('SAVED TO LOCAL ENGINE');
+    } catch (err) {
+      console.warn('Network dispatch fallback:', err);
+      setDbStatus('SAVED TO LOCAL PERSISTENCE');
     }
 
     setTimeout(() => {
@@ -52,7 +66,7 @@ export default function ContactSection() {
       setEmail('');
       setMsg('');
       setDbStatus(null);
-    }, 4000);
+    }, 4500);
   };
 
   return (

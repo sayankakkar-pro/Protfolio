@@ -1,17 +1,19 @@
 # 👑 Sayan Kakkar // Autonomous AI & Robotics Systems Portfolio (Next.js 14 Edition)
 
-An Awwwards-caliber, high-performance portfolio engineered with **Next.js 14 (App Router)**, **TypeScript**, **React 18**, **Three.js WebGL**, and **Tailwind CSS**.
+An Awwwards-caliber, high-performance portfolio engineered for the **Hackathon** utilizing the full modern stack.
 
 ---
 
-## ⚡ Tech Stack
+## ⚡ Complete Hackathon Technology Matrix:
 
-- **Framework**: Next.js 14 (App Router, Static Export ready)
-- **Language**: TypeScript
-- **3D Graphics & Physics**: Three.js WebGL
-- **Styling**: Tailwind CSS & SLY Obsidian Design System
-- **Icons**: Lucide React
-- **Sound Engine**: Web Audio API Synthesizer
+| Technology | Implementation in This Project | Status |
+| :--- | :--- | :--- |
+| **Next.js 14** | App Router, Server/Client components, Static Export | ✅ Integrated |
+| **React 18** | Interactive hooks, custom physics simulators, telemetry state | ✅ Integrated |
+| **MongoDB** | Schema models for project brief specifications (`src/lib/mongodb.ts`) | ✅ Integrated |
+| **Supabase** | Real-time database telemetry logging (`src/lib/supabase.ts`) | ✅ Integrated |
+| **Vercel** | Edge-ready serverless architecture for instant deployment | ✅ Integrated |
+| **GitHub** | Version control & CI/CD repository at `sayankakkar-pro/Protfolio` | ✅ Integrated |
 
 ---
 
@@ -32,9 +34,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser.
 ```bash
 npm run build
 ```
-The optimized production bundle is generated in `.next/` and exported to `out/` for instant GitHub Pages / CDN hosting.
 
 ---
 
 ## 🌐 1-Click Deployment to Vercel
-Deploy seamlessly by linking this repository directly to [Vercel](https://vercel.com).
+Deploy seamlessly by linking this repository directly to [Vercel](https://vercel.com/new).

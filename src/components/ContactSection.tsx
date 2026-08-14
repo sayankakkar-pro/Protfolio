@@ -25,26 +25,25 @@ export default function ContactSection() {
     setSubmitted(true);
     soundFX?.playClick();
 
-    try {
-      // Direct Supabase Real-Time Insert
-      const payload = {
-        name,
-        email,
-        message: msg,
-        created_at: new Date().toISOString(),
-      };
+    const payload = {
+      name,
+      email,
+      message: msg,
+      created_at: new Date().toISOString(),
+    };
 
-      // Attempt Supabase insert with graceful offline cache fallback
+    try {
       if (supabase) {
-        supabase.from('contact_dispatches').insert([payload]).then(({ error }) => {
-          if (error) {
-            console.warn('Supabase online store fallback:', error.message);
-          }
-        });
+        const { error } = await supabase.from('contact_dispatches').insert([payload]);
+        if (!error) {
+          setDbStatus('SYNCED DIRECTLY TO SUPABASE DB');
+        } else {
+          console.log('Supabase insert status:', error.message);
+          setDbStatus('SAVED TO LOCAL ENGINE');
+        }
       }
-      setDbStatus('SYNCED WITH SUPABASE DB');
     } catch {
-      setDbStatus('CACHED LOCALLY');
+      setDbStatus('SAVED TO LOCAL ENGINE');
     }
 
     setTimeout(() => {

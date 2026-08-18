@@ -34,7 +34,7 @@ export default function HeroSection() {
       <div className="overflow-hidden w-full text-center z-0 mt-6 sm:mt-4 md:-mt-5 select-none">
         <FadeIn delay={0.15} y={40}>
           <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
-            Hi, i&apos;m jack
+            Hi, i&apos;m sayan
           </h1>
         </FadeIn>
       </div>
@@ -50,7 +50,7 @@ export default function HeroSection() {
           >
             <img
               src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Jack - 3D Creator Portrait"
+              alt="Sayan - 3D Creator Portrait"
               className="w-full h-auto object-contain drop-shadow-2xl pointer-events-none"
               draggable={false}
             />

@@ -2,12 +2,13 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Jack -- 3D Creator',
+  title: 'Sayan -- 3D Creator',
   description:
     'A 3D creator driven by crafting striking and unforgettable projects. Specialized in 3D Modeling, Rendering, Motion Design, Branding, and Web Design.',
   keywords: [
     '3D Creator',
-    'Jack',
+    'Sayan',
+    'Sayan Kakkar',
     '3D Modeling',
     'Rendering',
     'Motion Design',
@@ -15,9 +16,9 @@ export const metadata: Metadata = {
     'Web Design',
     'Creative Portfolio',
   ],
-  authors: [{ name: 'Jack' }],
+  authors: [{ name: 'Sayan' }],
   openGraph: {
-    title: 'Jack -- 3D Creator',
+    title: 'Sayan -- 3D Creator',
     description: 'A 3D creator driven by crafting striking and unforgettable projects.',
     type: 'website',
   },

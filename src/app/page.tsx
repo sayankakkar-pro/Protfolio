@@ -44,10 +44,10 @@ export default function Home() {
             </p>
           </FadeIn>
           <FadeIn delay={0.3} y={20}>
-            <ContactButton href="mailto:jack.3dcreator@gmail.com" />
+            <ContactButton href="mailto:sayankakkar@gmail.com" />
           </FadeIn>
           <div className="pt-12 text-xs font-light text-[#D7E2EA]/40 uppercase tracking-widest">
-            © {new Date().getFullYear()} Jack — 3D Creator. All rights reserved.
+            © {new Date().getFullYear()} Sayan — 3D Creator. All rights reserved.
           </div>
         </div>
       </footer>

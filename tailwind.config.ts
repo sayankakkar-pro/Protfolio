@@ -9,25 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#000000",
-        foreground: "#ffffff",
-        sly: {
-          peach: "#f2a98c",
-          cyan: "#00f0ff",
-          violet: "#8b5cf6",
-          gold: "#facc15",
-          dark: "#050505",
-          card: "rgba(18, 18, 22, 0.75)",
-          border: "rgba(255, 255, 255, 0.08)",
-        }
+        darkBg: "#0C0C0C",
+        lightText: "#D7E2EA",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        mono: ["var(--font-jetbrains-mono)", "monospace"],
+        sans: ["'Kanit'", "sans-serif"],
+        kanit: ["'Kanit'", "sans-serif"],
       },
-      backgroundImage: {
-        "sly-grid": "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-      }
     },
   },
   plugins: [],

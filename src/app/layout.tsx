@@ -1,30 +1,16 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import CustomCursor from '@/components/CustomCursor';
-import Preloader from '@/components/Preloader';
 
 export const metadata: Metadata = {
-  title: 'Sayan Kakkar // Autonomous AI & Robotics Systems',
-  description:
-    'Sayan Kakkar is an autonomous robotics and AI developer at SOSE Shalimar Bagh. Delhi Govt Top 100/33,000 IIIT Boot Camp, Takumi Hackathon 5th, Aaroh GameDev 3rd, Autonomous Factory AGV Creator.',
-  keywords: [
-    'Sayan Kakkar',
-    'Robotics',
-    'ROS 2',
-    'Autonomous AGV',
-    'Next.js 14',
-    'Three.js',
-    'AI Engineer',
-    'IIIT Delhi',
-    'SOSE Shalimar Bagh',
-  ],
-  authors: [{ name: 'Sayan Kakkar' }],
-  themeColor: '#000000',
+  title: 'Jack -- 3D Creator',
+  description: 'A 3D creator driven by crafting striking and unforgettable projects. Specialized in 3D Modeling, Rendering, Motion Design, Branding, and Web Design.',
+  keywords: ['3D Creator', 'Jack', '3D Modeling', 'Rendering', 'Motion Design', 'Branding', 'Web Design', 'Creative Portfolio'],
+  authors: [{ name: 'Jack' }],
+  themeColor: '#0C0C0C',
   openGraph: {
-    title: 'Sayan Kakkar // Autonomous AI & Robotics Systems',
-    description: 'Ideas that ship in code, robotics, and hardware.',
+    title: 'Jack -- 3D Creator',
+    description: 'A 3D creator driven by crafting striking and unforgettable projects.',
     type: 'website',
-    url: 'https://sayankakkar-pro.github.io/Protfolio/',
   },
 };
 
@@ -39,25 +25,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-black text-white antialiased min-h-screen relative overflow-x-hidden">
-        {/* SLY Atmospheric Lighting & Grid */}
-        <div className="ambient-glow-top" />
-        <div className="ambient-glow-bottom" />
-        <div className="fixed inset-0 bg-sly-grid pointer-events-none z-0" />
-        <div className="scanline-bg" />
-
-        {/* Interactive Custom Cursor */}
-        <CustomCursor />
-
-        {/* SLY Cinematic Preloader */}
-        <Preloader />
-
-        {/* Page Content */}
-        <div className="relative z-10">{children}</div>
+      <body className="bg-[#0C0C0C] text-[#D7E2EA] font-sans antialiased overflow-x-clip min-h-screen">
+        <main className="main-wrapper overflow-x-clip bg-[#0C0C0C]">
+          {children}
+        </main>
       </body>
     </html>
   );

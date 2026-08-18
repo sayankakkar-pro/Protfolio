@@ -1,17 +1,32 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Jack -- 3D Creator',
-  description: 'A 3D creator driven by crafting striking and unforgettable projects. Specialized in 3D Modeling, Rendering, Motion Design, Branding, and Web Design.',
-  keywords: ['3D Creator', 'Jack', '3D Modeling', 'Rendering', 'Motion Design', 'Branding', 'Web Design', 'Creative Portfolio'],
+  description:
+    'A 3D creator driven by crafting striking and unforgettable projects. Specialized in 3D Modeling, Rendering, Motion Design, Branding, and Web Design.',
+  keywords: [
+    '3D Creator',
+    'Jack',
+    '3D Modeling',
+    'Rendering',
+    'Motion Design',
+    'Branding',
+    'Web Design',
+    'Creative Portfolio',
+  ],
   authors: [{ name: 'Jack' }],
-  themeColor: '#0C0C0C',
   openGraph: {
     title: 'Jack -- 3D Creator',
     description: 'A 3D creator driven by crafting striking and unforgettable projects.',
     type: 'website',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0C0C0C',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
